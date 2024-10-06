@@ -440,7 +440,17 @@ a{
 
 @media(max-width:768px){
     .flex-grid-gallery .column{
-        margin-left: 50px;
+        margin-left: 45px;
     }
 
 }
+
+@media(max-width:404px){
+    .flex-grid-gallery .column{
+        margin-left: -11px;
+    }
+    .gallery-header h1{
+        margin-left: -2px;
+    }
+}
+    
