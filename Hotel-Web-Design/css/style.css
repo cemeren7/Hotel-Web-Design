@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: gray;
+}
+
+html{
+    font-size: 10px;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+}
+
+
+/*flex özelligi*/
+.navbar{
+    display: flex; /*logo ve etiketlerin arasını aldık a etiketleri sag tarafa hizalandı*/
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkslategrey;
+    opacity: 0.8;
+    color: #ffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 3rem;
+}
+
+.navbar a{
+    color: #ffff;
+    padding: 1rem 2rem;
+    margin: 0. 5px;
+}
+
+/*flex özelligi ile a etiketleri yan yana aldık*/
+.navbar ul{
+    display: flex;
+}
+
+.navbar a:hover{
+    border-bottom: 1px solid navajowhite;
+    color: gainsboro;
+}
+
+.navbar span{
+    color: wheat;
+}
+
+.navbar .main-text{
+    font-weight:400;
+}
+
+.navbar h1{
+    font-size: 2.5rem;
+}
+
+.main-header{
+    background-image: url('../images/hotels2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: #ffff;
+    position: relative;
+}
+
+.main-header .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main-header .content a{
+    color: #ffff;
+    background-color: blue;
+    padding: 12px;
+    width: 170px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: transform 0.2s ease;
+}
+
+.main-header .content a:hover{
+    background-color: rgb(78, 78, 236);
+    transform: translate(8px); /* yatay eksende 5 px saga kaydırdık*/
+}
+
+.main-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.main-header *{
+    z-index: 5;
+}
+
+.main-header .content p,h1,a{
+    margin: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-header .content p{
+    max-width: 600px;
+}
+
+.main-header .content h1{
+    color: cadetblue;
+    font-size: 40px;
+    margin-bottom: -10px;
+}
+
+.flex-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+#services{
+    margin: 10px;
+}
+
+.flex-items div{
+    margin: 20px;
+    text-align: center;
+    padding-right: 10px;
+    border: hidden;
+    padding: 10px;
+    border-bottom: 0.5px solid gray;
+    border-radius: 20px;
+}
+
+.flex-items div h3{
+    padding-bottom: 15px;
+}
+
+.flex-items div  .fas{
+    background-color: darkcyan;
+    padding: 20px;
+    color: #ffff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.flex-items div:hover{
+    opacity: 0.9;
+}
+
+.flexbox-column .row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.flexbox-column{
+    margin-top: 30px;
+}
+
+.flexbox-column .column{
+    flex: 1; /* her ikisinin genişliginide aynı yaparak tam olarak sıgdırdı*/
+}
+
+.flexbox-column .column .colum1,
+.flexbox-column .column .colum2{
+    height: 100%;
+}
+
+.flexbox-column .colum2{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-left:  0.5px solid white;
+}
+
+.flexbox-column img{
+    width: 100%;
+    height: 100%;
+}
+
+.flexbox-column .column .colum2{
+    background-color: lightgoldenrodyellow;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    color: #ffff;
+}
+
+.flexbox-column .column .colum2 button{
+    border: none;
+    outline: none;
+    padding: 15px;
+    background-color: darkcyan;
+    border-radius: 15px;
+    width: 20%;
+    color: #ffff;
+    transition: all .2s ease;
+    border: 0.5px solid white;
+}
+
+.flexbox-column .column .colum2 button:hover{
+    background-color: dodgerblue;
+    transform: translate(-10px);
+    cursor: pointer;
+    background-color: #ffff;
+    color: darkcyan;
+    border: 0.5px solid darkcyan;
+}
+
+.gallery-header{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.gallery-header h1{
+    font-size: 4rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 30px;
+    color: #333;
+}
+
+.header-padding{
+    padding: 2rem 2rem 2rem 4rem;
+}
+
+.flex-grid-gallery .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-grid-gallery .column{
+    flex: 1;
+}
+
+.gallery-hover img:hover{
+   opacity: 0.8;
+   cursor: pointer;
+}
+
+.section-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.section-padding{
+    padding: 4rem 4rem 4rem;
+
+}
+
+.flex-items-room{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.flex-items-room>div{
+    padding: 20px;
+}
+
+.flex-items-room .card-body{
+    padding: 2rem;
+    background-color:none;
+    color: darkslategrey;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex-items-room .teams img{
+    border-radius: 50%;
+}
+
+.flex-items-room .teams-box{
+    border-radius: 20px;
+    margin-top: -2px;
+}
+
+.flex-items-room .room-box{
+    margin-top: -8px;
+}
+
+.background-light{
+    background-color: #f5f4f4;
+}
+
+.flex-items-room .rooms-hover .room-box{
+    box-shadow: -2px 4px 15px -3px rgba(0,0,0,0.75);
+}
+
+.flex-items-room .rooms-hover  img{
+    box-shadow: -2px 4px 15px -3px rgba(0,0,0,0.75);
+}
+.flex-items-room .teams img:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.flex-items-room .teams img{
+    transition: opacity .2s ease;
+}
+
+.flex-items-room .room-box{
+    background-color: lightsteelblue;
+    opacity: 0.7;
+}
+
+.flex-items-room .teams-box .fas{
+    color: darkcyan;
+}
+
+.btn-teams{
+   border: none;
+   padding: 10px;
+   background-color: slategray;
+   border-radius: 10px;
+   margin-top: 5px;
+   color: #f5f5f5;
+}
+
+.btn-teams:hover{
+    background-color: #b1b1b1;
+    color: white;
+    cursor: pointer;
+}
+
+.flex-items-room .room-box .fas{
+    margin-top: 10px;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.flexbox-column .colum2 .fas{
+    color: darkcyan;
+    padding: 10px;
+    font-size: 1.7rem;
+}
+
+.content .colum{
+    display: flex;
+}
+
+.footer .social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-top: -20px;
+}
+
+.footer{
+    padding: 30px;
+    background-color: gainsboro;
+}
+
+.footer .social-icons .fab{
+    padding: 10px;
+    font-size: 21px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.footer .social-icons .fa-instagram:hover{
+       background-color: red;
+       color: white;
+}
+
+.footer .social-icons .fa-facebook:hover{
+    background-color: blue;
+    color: white;
+}
+
+.footer .social-icons .fa-twitter:hover{
+    background-color: #333;
+    color: white;
+}
+
+@media(max-width:700px){
+    .flexbox-column .column .colum2 button{
+        width: 100px;
+    }
+}
+
+@media(max-width:675px){
+    .gallery-header h1{
+        text-align: left;
+    }
+}
+
+@media(max-width:768px){
+    .flexbox-column .column{
+        flex: 100%; /*içinde bulundugu container tamamen kapladı*/
+    }
+}
+
+@media(max-width:768px){
+    .gallery-header h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+@media(max-width:768px){
+    .flex-grid-gallery .column{
+        margin-left: 50px;
+    }
+
+}
