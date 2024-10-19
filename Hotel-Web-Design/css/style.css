@@ -26,10 +26,8 @@ a{
     color: gray;
 }
 
-
-/*flex özelligi*/
 .navbar{
-    display: flex; /*logo ve etiketlerin arasını aldık a etiketleri sag tarafa hizalandı*/
+    display: flex; 
     align-items: center;
     justify-content: space-between;
     background-color: darkslategrey;
@@ -49,7 +47,7 @@ a{
     margin: 0. 5px;
 }
 
-/*flex özelligi ile a etiketleri yan yana aldık*/
+
 .navbar ul{
     display: flex;
 }
@@ -102,7 +100,7 @@ a{
 
 .main-header .content a:hover{
     background-color: rgb(78, 78, 236);
-    transform: translate(8px); /* yatay eksende 5 px saga kaydırdık*/
+    transform: translate(8px);
 }
 
 .main-header::before{
@@ -186,7 +184,7 @@ a{
 }
 
 .flexbox-column .column{
-    flex: 1; /* her ikisinin genişliginide aynı yaparak tam olarak sıgdırdı*/
+    flex: 1; 
 }
 
 .flexbox-column .column .colum1,
@@ -326,6 +324,7 @@ a{
 .flex-items-room .rooms-hover  img{
     box-shadow: -2px 4px 15px -3px rgba(0,0,0,0.75);
 }
+
 .flex-items-room .teams img:hover{
     opacity: 0.9;
     cursor: pointer;
@@ -426,7 +425,7 @@ a{
 
 @media(max-width:768px){
     .flexbox-column .column{
-        flex: 100%; /*içinde bulundugu container tamamen kapladı*/
+        flex: 100%; 
     }
 }
 
